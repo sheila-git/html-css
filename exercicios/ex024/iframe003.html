@@ -5,15 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uso de iframes</title>
+
+    <style>
+        iframe{
+           width: 95%; 
+           height: auto;
+          border: 2px solid black;
+        }
+
+    </style>
 </head>
 <body>
     <h1>Faça uma escolha</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta fugiat doloremque tempore. Rem, aspernatur officiis veritatis nisi suscipit, dicta dolores culpa nam assumenda consequatur quas quae! Assumenda, libero dolorem.</p>
+    <p>Podemos também usar um iframe para carregar outras páginas nossas dentro dele como se pode ver nos exemplos abaixo. Ao clicarmos nos links abaixo vamos ver, dentro do iframe, as páginas assinaladas</p>
+
+    <ul>
+        <li> <a href="paginasextra/pagina001.html" target="frame">Primeira Página</a>
+        <li><a href="paginasextra/pagina002.html" target="frame">Segunda Página</a></li>   
+       
+
+    </ul>
     
 
 
 
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor esse cupiditate harum, magni quo alias nostrum. Dolorum, nesciunt. Voluptatem voluptas ex adipisci quasi iste explicabo laborum error voluptatum dolores pariatur?</p>
+    <p>Para conseguirmos isto temos que dar um "name" ao iframe e usar esse nome como "target" no link</p>
+
+
+    <iframe name="frame" src="" >
+        <p>Infelizmente o seu navegador não é compatível!</p>
+    </iframe>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et sed voluptatem accusamus, qui commodi minima non, adipisci possimus dicta sapiente dolorum, animi libero itaque. Dolores officiis saepe itaque sunt reprehenderit.</p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae placeat, temporibus incidunt laboriosam aut architecto optio unde magnam reprehenderit mollitia nesciunt nihil distinctio voluptatibus. Rem nobis tempora mollitia ratione quod.</p>
+
 </body>
 </html>
