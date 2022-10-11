@@ -17,7 +17,7 @@
 
     --fonte-padrao:Arial, Verdana, Helvetica, sans-serif;
     --fonte-destaque: 'Bebas Neue', cursive;
-    --fonte-android: 'Android'; cursive;
+    --fonte-android: 'Android' cursive;
 }
 
 * {
@@ -84,6 +84,7 @@ nav > a:hover {
     background-color: var(--cor3);
     color:var(--cor5)
 }
+
 main {
 
     min-width: 300px;
@@ -135,7 +136,46 @@ main img.pequena {
     display: block;
     margin:auto
 }
+
+
+aside {
+    background-color: var(--cor0);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.312);
+
+}
+
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px -0px -10px;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+aside > ul {
+    list-style-type: '\2705\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
+
+}
+
 footer {
     background-color: var(--cor5);
     color:white;
+    text-align: center;
+    padding: 5px;
+
+}
+footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color:var(--cor0)
 }
