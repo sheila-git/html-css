@@ -1,40 +1,42 @@
 <!DOCTYPE html>
-<html lang="pt-pt">
+<html lang="pt-pt>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste de Formulário</title>
+    <title>Formulário com telefone e email</title>
     <style>
-
         * {
             font-family: Arial, Helvetica, sans-serif;
         }
     </style>
 </head>
 <body>
-    <form action="registo.php" method="post" autocomplete="on">    
+   <form action="registo.php" method="post" autocomplete="on"> 
+
+    <fieldset>
+        <legend>Dados Pessoais</legend>
         <p>
             <label for="inome">Nome</label>
             <input type="text" name="nome" id="inome" required maxlength="30" placeholder="Nome completo" autocomplete="name">
         </p>
         <p>
-            <label for="imedia">Média</label>
-            <input type="number" name="media" id="imedia"  min="0" max="20" placeholder="0 a 20" required>
-        </p>
-  
-        <p>
-            <label for="idata">Data</label>
-            <input type="date" name="data" id="idata" required>
+            <label for="itelefone">Telefone</label>
+            <input type="tel" name="tel" id="itel" autocomplete="tel-country-code" required>
         </p>
         <p>
-            <input type="submit" value="Enviar">     
+            <label for="imail">Email</label>
+            <input type="email" name="email" id="imail" required placeholder="Email" autocomplete="email">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
         </p>
-        
-       
+    </fieldset>
 
-    </form>
-    
+
+
+
+   </form> 
 </body>
 </html>
