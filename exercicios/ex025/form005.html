@@ -7,6 +7,24 @@
     <title>Checkbox e Radio</title>
 </head>
 <body>
-    
+    <h1>Exemplo de Formulário</h1>
+    <form action="registo.php" method="post">
+    <fieldset>
+        <legend>Sexo</legend>
+        <input type="radio" name="sexo" id="imasc"> <label for="imasc">M</label> <br>
+        <input type="radio" name="sexo" id="ifem"> <label for="ifem">F</label>
+    </fieldset>
+    <fieldset>
+        <legend>Desportos Favoritos</legend>
+        <input type="checkbox" name="futebol" id="ifutebol"> <label for="ifutebol">Futebol</label> <br>
+        <input type="checkbox" name="natação" id="inatacao"> <label for="inatacao">Natação</label> <br>
+        <input type="checkbox" name="andebol" id="iandebol"> <label for="iandebol">Andebol</label> <br>
+        <input type="checkbox" name="danca" id="idanca"> <label for="idanca">Dança</label><br>
+    </fieldset>
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </p>
+</form>    
 </body>
 </html>
