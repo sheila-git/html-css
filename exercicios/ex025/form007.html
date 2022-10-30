@@ -13,38 +13,75 @@
 </head>
 <body>
     <h1>Meu Primeiro Formulário</h1>
-    <form action="registo.php" method="post"
-        <fieldset>
-            <legend>Dados Pessoais</legend>
-            <p><label for="inome">Nome:</label>
-            <input type="text" name="nome" id="inome"></p>
-            <p><label for="isobrenome">Sobrenome:</label>
-             <input type="text" name="sobrenome" id="isobrenome"></p>
-            <p><label for="ipass">Password: </label>
-                <input type="password" name="pass" id="ipass"required minlength="6" autocomplete="current-password"></p>
-            
-            <p><label for="idata">Data</label>
-              <input type="date" name="data" id="idata" required></p>
-            
-            <p>
-                <label for="itelefone">Telefone</label>
-                <input type="tel" name="tel" id="itel" autocomplete="tel-country-code" required> </p>
-            <p>
-                <label for="imail">Email</label>
-                <input type="email" name="email" id="imail" required placeholder="Email" autocomplete="email"></p>
-        </fieldset>
-
-    
-
-        <fieldset>
-                <legend>Sexo</legend>
-                <input type="radio" name="sexo" id="imasc"> <label for="imasc">M</label> <br>
-                <input type="radio" name="sexo" id="ifem"> <label for="ifem">F</label>
-        </fieldset>  
+    <form action="registo.php" method="post" autocomplete="on">
+       <fieldset>
+        <legend>Preenchimento Obrigatório</legend>
         <p>
+            <label for="inome">Nome</label>
+            <input type="text" name="nome" id="inome" required maxlength="30" placeholder="Nome completo" autocomplete="name">
+        </p>
+        <label for="isexo">Sexo</label required>
+        <input type="radio" name="sexo" id="imasc"> <label for="imasc">M</label> 
+        <input type="radio" name="sexo" id="ifem"> <label for="ifem">F</label>
+        <p>
+            <label for="icid">Cidade</label>
+             <select name="cidade" id="icid">
+                <option value="" selected>---escolha---</option>
+                <optgroup label="Norte">
+                    <option value="PT">Porto</option>
+                    <option value="VNG">Vila Nova de Gaia</option>
+                </optgroup>
+                <optgroup label="Centro">
+                    <option value="Lx">Lisboa</option>
+                </optgroup>
+                <optgroup label="Sul">
+                    <option value="AL">Algarve</option>
+                </optgroup>
+
+             </select>
+        </p>
+        <p>
+            <label for="iprof">Profissão</label>
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <option>Administrador</option>
+                <option>Desenvolvedor</option>
+                <option>Contabilista</option>
+                <option>Técnico Superior</option>
+            </datalist>
+        </p>
+        <p>
+            <label for="itelefone">Telefone</label>
+            <input type="tel" name="tel" id="itel" autocomplete="tel-country-code" required>
+        </p>
+        <p>
+            <label for="imail">Email</label>
+            <input type="email" name="email" id="imail" required placeholder="Email" autocomplete="email">
+        </p>
+    </fieldset>
+        </p>
+
+        <fieldset>
+            <legend>Facultativo</legend>
+            <p>
+                <label for="inivel">Nível de Satisfação</label>
+                <input type="range" name="nivel" id="inivel" min="1" max="5" value="0">
+            </p>
+            <p>
+                <label for="ifoto">Foto de perfil</label>
+                <input type="file" name="foto" id="ifoto">
+            </p>
+            <p>
+                <label for="imsg">Feedback</label> <br>
+                <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+            </p>
+        </fieldset>
+       <br>
+       
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
-        </p>
-    </form>
+       
+        
+   </form>
 </body>
 </html>
