@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Global</title>
+    <style>
+        * {font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Meu Primeiro Formulário</h1>
+    <form action="registo.php" method="post"
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p><label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome"></p>
+            <p><label for="isobrenome">Sobrenome:</label>
+             <input type="text" name="sobrenome" id="isobrenome"></p>
+            <p><label for="ipass">Password: </label>
+                <input type="password" name="pass" id="ipass"required minlength="6" autocomplete="current-password"></p>
+            
+            <p><label for="idata">Data</label>
+              <input type="date" name="data" id="idata" required></p>
+            
+            <p>
+                <label for="itelefone">Telefone</label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel-country-code" required> </p>
+            <p>
+                <label for="imail">Email</label>
+                <input type="email" name="email" id="imail" required placeholder="Email" autocomplete="email"></p>
+        </fieldset>
+
+    
+
+        <fieldset>
+                <legend>Sexo</legend>
+                <input type="radio" name="sexo" id="imasc"> <label for="imasc">M</label> <br>
+                <input type="radio" name="sexo" id="ifem"> <label for="ifem">F</label>
+        </fieldset>  
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
